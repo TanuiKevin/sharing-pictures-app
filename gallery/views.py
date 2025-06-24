@@ -15,7 +15,7 @@ def upload_photo(request):
                 for f in files:
                     Photo.objects.create(image=f)
                 messages.success(request, f'Successfully uploaded {len(files)} files!')
-                return redirect('index')
+                return redirect('gallery')
     else:
         form = MultiPhotoForm()
     
